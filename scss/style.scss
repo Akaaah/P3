@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'btn';
 
 // Général
 
@@ -20,6 +21,7 @@ html{
     
     .logo{
         @extend %center;
+
         height: 6rem;
         box-shadow: 0px 3px 5px  rgba(0, 0, 0, 0.2);
         h1{
@@ -29,6 +31,7 @@ html{
     }
     .localisation{
         @extend %center;
+
         height: 3.5rem;
         background-color: $gray;
         margin-top: 0.3rem;
@@ -45,3 +48,38 @@ html{
 
 // Explorer nos restaurants
 
+.contenair_explorer{
+    @extend %column;
+
+    background-color: #f7f6f7;
+    align-items: center;
+    height: 20rem;
+    .text_explore{
+        text-align: center;
+        margin-top: 3rem;
+        h2{
+            font-size: 2rem;
+            font-family: $texte;
+        }
+        h3{
+            margin-top: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: lighter;
+            font-family: $texte;
+        }
+    }
+    .btn_explorer{
+        margin-top: 1.5rem;
+        background: linear-gradient( to bottom right, $pink, $purple);
+        padding: 1rem;
+        border-radius: 20px;
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.4rem;
+            font-family: $texte;
+        }
+    }
+}
+
+// fonctionnement
