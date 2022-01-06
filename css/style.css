@@ -1,3 +1,43 @@
+.contenair_header .localisation, .contenair_header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.contenair_header {
+  display: flex;
+  flex-direction: column;
+}
+.contenair_header .logo {
+  height: 6rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.contenair_header .logo h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.4rem;
+}
+.contenair_header .localisation {
+  height: 3.5rem;
+  background-color: #eaebec;
+  margin-top: 0.3rem;
+}
+.contenair_header .localisation p {
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.contenair_header .localisation p .fa-map-marker-alt {
+  margin-right: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */
