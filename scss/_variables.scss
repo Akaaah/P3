@@ -10,6 +10,20 @@
     flex-direction: column;
 }
 
+%cirle{
+    position: relative;
+    right: 3rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: #9356DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+}
+
 // les couleurs
 
 $purple: #9356DC;
@@ -17,6 +31,7 @@ $pink: #FF79DA;
 $cyan: #99E2D0;
 $gray: #eaebec;
 $light_grey:#f7f6f7;
+$gradient:linear-gradient( to bottom right, $pink, $purple);
 
 
 // fonts

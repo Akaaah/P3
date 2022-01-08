@@ -4,9 +4,23 @@
   justify-content: center;
 }
 
-.contenair_explorer {
+.container_fonctionnement, .contenair_explorer {
   display: flex;
   flex-direction: column;
+}
+
+.container_fonctionnement .box_fonctionnement .fonctionnement .cirle {
+  position: relative;
+  right: 3rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: normal;
 }
 
 * {
@@ -17,6 +31,10 @@
 
 html {
   font-size: 62.5%;
+}
+
+section {
+  font-family: "Roboto", sans-serif;
 }
 
 .contenair_header {
@@ -69,12 +87,41 @@ html {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 1rem;
   border-radius: 20px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
 }
 .contenair_explorer .btn_explorer a {
   text-decoration: none;
   color: white;
   font-size: 1.4rem;
   font-family: "Roboto", sans-serif;
+}
+
+.container_fonctionnement h2 {
+  font-size: 2em;
+  margin-left: 1.5rem;
+  margin-top: 3rem;
+}
+.container_fonctionnement .box_fonctionnement {
+  background-color: #f7f6f7;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-left: 2.3rem;
+  margin-right: 2.3rem;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 2px 6px 8px rgba(51, 50, 50, 0.1);
+}
+.container_fonctionnement .box_fonctionnement .fonctionnement {
+  display: flex;
+}
+.container_fonctionnement .box_fonctionnement .fonctionnement .icone {
+  margin-right: 2rem;
+  font-size: 1.6rem;
+  color: gray;
+}
+.container_fonctionnement .box_fonctionnement .fonctionnement .text {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
