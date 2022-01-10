@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: #f7f6f7;
+  background-color: #f7f7f6;
 }
 
 footer {
@@ -132,7 +132,7 @@ section {
   margin-top: 3rem;
 }
 .section_fonctionnement .container_fonctionnement .box_fonctionnement {
-  background-color: #f7f6f7;
+  background-color: #f7f7f6;
   padding: 2rem;
   margin-top: 2rem;
   margin-left: 2.3rem;
