@@ -1,4 +1,4 @@
-.container_fonctionnement .box_fonctionnement:hover, .contenair_explorer .btn_explorer:hover {
+.section_fonctionnement .container_fonctionnement .box_fonctionnement:hover, .contenair_explorer .btn_explorer:hover {
   box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
 }
@@ -11,6 +11,19 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #f7f6f7;
+}
+
+footer {
+  margin-top: auto;
 }
 
 section {
@@ -23,12 +36,12 @@ section {
   justify-content: center;
 }
 
-.container_restaurants, .container_fonctionnement, .contenair_explorer {
+.section_restaurants .container_restaurants, .section_fonctionnement .container_fonctionnement, .contenair_explorer {
   display: flex;
   flex-direction: column;
 }
 
-.container_fonctionnement .box_fonctionnement .fonctionnement .cirle {
+.section_fonctionnement .container_fonctionnement .box_fonctionnement .fonctionnement .cirle {
   position: relative;
   right: 3rem;
   width: 2.2rem;
@@ -45,14 +58,19 @@ section {
 .contenair_header {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 .contenair_header .logo {
   height: 6rem;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
-.contenair_header .logo h1 {
+.contenair_header .logo a {
+  text-decoration: none;
+}
+.contenair_header .logo a h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
+  color: black;
 }
 .contenair_header .localisation {
   height: 3.5rem;
@@ -60,7 +78,7 @@ section {
   margin-top: 0.3rem;
 }
 .contenair_header .localisation p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -78,34 +96,42 @@ section {
   margin-top: 3rem;
 }
 .contenair_explorer .text_explore h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: "Roboto", sans-serif;
 }
 .contenair_explorer .text_explore h3 {
   margin-top: 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: lighter;
   font-family: "Roboto", sans-serif;
 }
 .contenair_explorer .btn_explorer {
   margin-top: 1.5rem;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  padding: 1.3rem;
-  border-radius: 20px;
+  padding: 1.5rem;
+  border-radius: 22px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
 }
 .contenair_explorer .btn_explorer a {
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
-.container_fonctionnement h2 {
-  font-size: 2em;
+.section_fonctionnement {
+  background-color: #fffefe;
+}
+.section_fonctionnement .container_fonctionnement {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+.section_fonctionnement .container_fonctionnement h2 {
+  font-size: 2.2rem;
   margin-left: 1.5rem;
   margin-top: 3rem;
 }
-.container_fonctionnement .box_fonctionnement {
+.section_fonctionnement .container_fonctionnement .box_fonctionnement {
   background-color: #f7f6f7;
   padding: 2rem;
   margin-top: 2rem;
@@ -116,27 +142,50 @@ section {
   font-weight: bold;
   box-shadow: 2px 6px 8px rgba(51, 50, 50, 0.1);
 }
-.container_fonctionnement .box_fonctionnement .fonctionnement {
+.section_fonctionnement .container_fonctionnement .box_fonctionnement .fonctionnement {
   display: flex;
 }
-.container_fonctionnement .box_fonctionnement .fonctionnement .icone {
+.section_fonctionnement .container_fonctionnement .box_fonctionnement .fonctionnement .icone {
   margin-right: 2rem;
   font-size: 1.6rem;
   color: gray;
 }
-.container_fonctionnement .box_fonctionnement .fonctionnement .text {
+.section_fonctionnement .container_fonctionnement .box_fonctionnement .fonctionnement .text {
   font-size: 1.6rem;
 }
-.container_restaurants {
-  margin-top: 3rem;
-  background-color: #f7f6f7;
+.section_fonctionnement .container_fonctionnement .pink {
+  background-color: #f4ecff;
 }
-.container_restaurants h2 {
+.section_fonctionnement .container_fonctionnement .pink .fonctionnement .icone {
+  color: #9356DC;
+}
+.section_fonctionnement .container_fonctionnement .pink .fonctionnement .text {
+  color: #9356DC;
+}
+@media screen and (min-width: 935px) {
+  .section_fonctionnement .container_fonctionnement .btn_container_fonctionnement {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1Fr;
+  }
+}
+
+.section_restaurants {
+  height: 100%;
+}
+.section_restaurants .container_box_restaurants {
+  margin-bottom: 5rem;
+}
+.section_restaurants .container_restaurants {
+  max-width: 1024px;
+  margin: auto;
+  margin-top: 3rem;
+}
+.section_restaurants .container_restaurants h2 {
   margin-top: 3rem;
   margin-left: 1.5rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
-.container_restaurants .box_restaurants {
+.section_restaurants .container_restaurants .box_restaurants {
   background-color: white;
   margin-top: 2rem;
   margin-left: 1.5rem;
@@ -144,39 +193,55 @@ section {
   border-radius: 15px;
   box-shadow: 2px 6px 8px rgba(51, 50, 50, 0.1);
 }
-.container_restaurants .box_restaurants a {
+.section_restaurants .container_restaurants .box_restaurants a {
   text-decoration: none;
   color: black;
 }
-.container_restaurants .box_restaurants .box_img_restaurant .img_restaurant {
+.section_restaurants .container_restaurants .box_restaurants .box_img_restaurant {
+  position: relative;
+}
+.section_restaurants .container_restaurants .box_restaurants .box_img_restaurant .img_restaurant {
   object-fit: cover;
   width: 100%;
   height: 15rem;
   border-radius: 15px 15px 0px 0px;
 }
-.container_restaurants .box_restaurants .description {
+.section_restaurants .container_restaurants .box_restaurants .box_img_restaurant p {
+  position: absolute;
+  bottom: 10rem;
+  right: 1.5rem;
+  z-index: 1;
+  padding: 1rem;
+  background-color: #98e3d0;
+  color: #008766;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+.section_restaurants .container_restaurants .box_restaurants .description {
   position: relative;
   margin-left: 1rem;
   margin-top: 1rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   margin-bottom: 1rem;
+  height: 5rem;
 }
-.container_restaurants .box_restaurants .description h4 {
-  font-size: 1.4rem;
+.section_restaurants .container_restaurants .box_restaurants .description h4 {
+  font-size: 1.6rem;
 }
-.container_restaurants .box_restaurants .description p {
-  font-size: 1.3rem;
+.section_restaurants .container_restaurants .box_restaurants .description p {
+  font-size: 1.5rem;
 }
-.container_restaurants .box_restaurants .description .test i {
+.section_restaurants .container_restaurants .box_restaurants .description .heart i {
   position: absolute;
   right: 3rem;
-  font-size: 1.7rem;
-  bottom: 1.5rem;
+  font-size: 2rem;
+  bottom: 2.2rem;
 }
-.container_restaurants .box_restaurants .description .test .fas {
+.section_restaurants .container_restaurants .box_restaurants .description .heart .fas {
   opacity: 0;
 }
-.container_restaurants .box_restaurants .description .test:hover .fas {
+.section_restaurants .container_restaurants .box_restaurants .description .heart:hover .fas {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -184,33 +249,74 @@ section {
   opacity: 1;
   transition: 0.5s;
 }
-.container_restaurants .box_restaurants .description .test:hover .far {
+.section_restaurants .container_restaurants .box_restaurants .description .heart:hover .far {
   opacity: 0;
+}
+.section_restaurants .container_restaurants .box_restaurants:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 6px 8px rgba(147, 86, 220, 0.2), -2px -6px 8px rgba(147, 86, 220, 0.2);
+}
+@media screen and (min-width: 935px) {
+  .section_restaurants .container_box_restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 footer {
-  height: 13rem;
+  height: 15rem;
   background-color: #353535;
-  margin-top: 5rem;
+  margin-top: auto;
 }
-footer .container_footer {
-  display: flex;
-  flex-direction: column;
+footer .footer_box {
   margin-left: 1.5rem;
 }
-footer .container_footer p {
+footer .container_footer {
+  max-width: 1024px;
+  margin: auto;
+  display: grid;
+}
+footer .container_footer .logo_footer p {
   color: white;
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: "Shrikhand", cursive;
   margin-bottom: 0.5rem;
 }
-footer .container_footer a {
+footer .container_footer .link_footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+footer .container_footer .link_footer a {
   text-decoration: none;
   color: white;
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: "Roboto", sans-serif;
+}
+footer .container_footer .link_footer .fa-utensils {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+footer .container_footer .link_footer .fa-hands-helping {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+footer .container_footer .link_footer a:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 935px) {
+  footer .container_footer .link_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 935px) {
+  footer {
+    height: 10rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

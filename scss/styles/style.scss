@@ -2,23 +2,29 @@
 @import 'components/btn';
 @import 'base/general';
 @import 'utils/mixins';
-@import 'responsive/mediaqueries';
+@import 'components/breakpoints';
 
 // header
+
 
 .contenair_header{
     display: flex;
     flex-direction: column;
-    
+    background-color: white;
+
     .logo{
         @extend %center;
 
         height: 6rem;
         box-shadow: 0px 3px 5px  rgba(0, 0, 0, 0.2);
-        h1{
-            font-family: $logo;
-            font-size: 2.4rem;
-        }
+        a{
+            text-decoration: none;
+            h1{
+                font-family: $logo;
+                font-size: 2.8rem;
+                color: black;
+            }
+        } 
     }
     .localisation{
         @extend %center;
@@ -27,7 +33,7 @@
         background-color: $gray;
         margin-top: 0.3rem;
         p{
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-family: $texte;
             font-weight: bold;
             .fa-map-marker-alt{
@@ -49,12 +55,12 @@
         text-align: center;
         margin-top: 3rem;
         h2{
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-family: $texte;
         }
         h3{
             margin-top: 1.5rem;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: lighter;
             font-family: $texte;
         }
@@ -62,13 +68,13 @@
     .btn_explorer{
         margin-top: 1.5rem;
         background: $gradient;
-        padding: 1.3rem;
-        border-radius: 20px;
+        padding: 1.5rem;
+        border-radius: 22px;
         box-shadow: 2px 4px 5px  rgba(0, 0, 0, 0.2);
         a{
             text-decoration: none;
             color: white;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-family: $texte;
         }
     }
@@ -78,142 +84,240 @@
 }
 
 // fonctionnement
-
-.container_fonctionnement{
-    @extend %column;
-    
-    h2{
-        font-size: 2em;
-        margin-left: 1.5rem;
-        margin-top: 3rem;
-    }
-    .box_fonctionnement{
-        background-color: $light_grey;
-        padding: 2rem;
-        margin-top: 2rem;
-        margin-left: 2.3rem;
-        margin-right: 2.3rem;
-        border-radius: 15px;
-        font-size: 1.4rem;
-        font-weight: bold;
-        box-shadow: 2px 6px 8px  rgba(51, 50, 50, 0.1);
-        .fonctionnement{
-            display: flex;
-            .cirle{
-                @extend %cirle;
+.section_fonctionnement{
+    background-color: #fffefe;
+    .container_fonctionnement{
+        @extend %column;
+        max-width: 1024px;
+        margin: auto;
+        margin-bottom: 5rem;
+        
+        h2{
+            font-size: 2.2rem;
+            margin-left: 1.5rem;
+            margin-top: 3rem;
+        }
+        .box_fonctionnement{
+            background-color: $light_grey;
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-left: 2.3rem;
+            margin-right: 2.3rem;
+            border-radius: 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 2px 6px 8px  rgba(51, 50, 50, 0.1);
+            .fonctionnement{
+                display: flex;
+                .cirle{
+                    @extend %cirle;
+                }
+                .icone{
+                    margin-right: 2rem;
+                    font-size: 1.6rem;
+                    color: gray;
+                }
+                .text{
+                    font-size: 1.6rem;
+                }
+            }      
+        }
+        .pink{
+            background-color: #f4ecff;
+            .fonctionnement{
+                .icone{
+                    color: $purple;
+                }
+                .text{
+                    color: $purple
+                }
             }
-            .icone{
-                margin-right: 2rem;
-                font-size: 1.6rem;
-                color: gray;
+        }
+        // hover
+        .box_fonctionnement:hover{
+            @extend %btn_hover;
+        }
+        // responsive
+        .btn_container_fonctionnement{
+            @include desktop{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1Fr;
+                }
             }
-            .text{
-                font-size: 1.6rem;
-            }
-        }      
-    }
-    .box_fonctionnement:hover{
-        @extend %btn_hover;
-    }
+        }
 }
+
+    
 
 // Restaurants
 
-.container_restaurants{
-    @extend %column;
+.section_restaurants{
     
-    
-    margin-top: 3rem;
-    background-color: $light_grey;
-    h2{
+    height: 100%;
+    .container_box_restaurants{
+        margin-bottom: 5rem;
+    }
+    .container_restaurants{
+        @extend %column;
+        max-width: 1024px;
+        margin: auto;
         margin-top: 3rem;
-        margin-left: 1.5rem;
-        font-size: 2rem;
-    }
-    .box_restaurants{
-        background-color: white;
-        margin-top: 2rem;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        border-radius: 15px;
-        box-shadow: 2px 6px 8px  rgba(51, 50, 50, 0.1);
-        a{
-            text-decoration: none;
-            color: black;
+
+        h2{
+            margin-top: 3rem;
+            margin-left: 1.5rem;
+            font-size: 2.2rem;
         }
-        .box_img_restaurant{
-            .img_restaurant{
-                object-fit: cover;
-                width: 100%;
-                height: 15rem;
-                border-radius: 15px 15px 0px 0px;
+        .box_restaurants{
+            background-color: white;
+            margin-top: 2rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 2px 6px 8px  rgba(51, 50, 50, 0.1);
+            a{
+                text-decoration: none;
+                color: black;
             }
-        }
-        .description{
-            position: relative;
-            margin-left: 1rem;
-            margin-top: 1rem;
-            line-height: 1.8rem;
-            margin-bottom: 1rem;
-            
-            h4{
-                font-size: 1.4rem;
-            }
-            p{
-                font-size: 1.3rem;
-            }
-            .test{
-                i{
+            .box_img_restaurant{
+                position: relative;
+                .img_restaurant{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 15rem;
+                    border-radius: 15px 15px 0px 0px;
+                }
+                p{
                     position: absolute;
-                    right: 3rem;
-                    font-size: 1.7rem;
-                    bottom: 1.5rem;
-                }
-                .fas{
-                    opacity: 0;
-                }     
-            }
-            .test:hover{  
-                .fas{
-                    background-image: $gradient;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    opacity: 1;
-                    transition: 0.5s;
-                }
-                .far{
-                    opacity: 0;
+                    bottom: 10rem;
+                    right: 1.5rem;
+                    z-index: 1;
+                    padding: 1rem;
+                    background-color: #98e3d0;
+                    color: #008766;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    border-radius: 2px;
                 }
             }
-        }      
+            .description{
+                position: relative;
+                margin-left: 1rem;
+                margin-top: 1rem;
+                line-height: 2rem;
+                margin-bottom: 1rem;
+                height: 5rem;
+                
+                h4{
+                    font-size: 1.6rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+                .heart{
+                    i{
+                        position: absolute;
+                        right: 3rem;
+                        font-size: 2rem;
+                        bottom: 2.2rem;
+                    }
+                    .fas{
+                        opacity: 0;
+                    }     
+                }
+                .heart:hover{  
+                    .fas{
+                        background-image: $gradient;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                    .far{
+                        opacity: 0;
+                    }
+                }
+            }      
+        }
+        .box_restaurants:hover{
+            transform: scale(1.02);
+            box-shadow: 2px 6px 8px  rgb(147, 86, 220, 0.2),
+            -2px -6px 8px rgb(147, 86, 220, 0.2);
+        }
     }
+    // responsive
+    .container_box_restaurants{
+        @include desktop{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            }
+        }
 }
+
 
 // footer
 
 footer{
-    height: 13rem;
+    height: 15rem;
     background-color: #353535;
-    margin-top: 5rem;
-    .container_footer{
-        display: flex;
-        flex-direction: column;
+    margin-top: auto;
+    
+
+    .footer_box{
         margin-left: 1.5rem;
-        p{
-            color: white;
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            font-family: $logo;
-            margin-bottom: 0.5rem;
+    }
+    .container_footer{
+        max-width: 1024px;
+        margin: auto;
+        display: grid;
+
+        .logo_footer{
+            p{
+                color: white;
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                font-family: $logo;
+                margin-bottom: 0.5rem;
+            }
         }
-        a{
-            text-decoration: none;
-            color: white;
-            margin-top: 0.5rem;
-            font-size: 1rem;
-            font-family: $texte;
+        .link_footer{
+            display: grid;
+            grid-template-columns: 1fr;
+            
+            a{
+                text-decoration: none;
+                color: white;
+                margin-top: 0.5rem;
+                font-size: 1.4rem;
+                font-family: $texte;
+            }
+            
+            
+                .fa-utensils{
+                    font-size: 1rem;
+                    margin-right: 1rem;
+                }
+                .fa-hands-helping{
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            
+            a:hover{
+                text-decoration: underline;
+            }
+            // responsive
+            @include desktop{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr ;
+                align-items: center;
+                justify-content: center;
+            }
         }
+    }
+    // responsive
+    @include desktop{
+        height: 10rem;
     }
 }
 

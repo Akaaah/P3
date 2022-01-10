@@ -1,0 +1,10 @@
+$breakpoints: (
+    desktop: 935px
+);
+
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+        }
+    }
