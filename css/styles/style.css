@@ -1,6 +1,7 @@
 .section_fonctionnement .container_fonctionnement .box_fonctionnement:hover, .contenair_explorer .btn_explorer:hover {
   box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
+  cursor: pointer;
 }
 
 * {

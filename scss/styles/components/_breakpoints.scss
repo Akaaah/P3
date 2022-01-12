@@ -1,5 +1,6 @@
 $breakpoints: (
-    desktop: 935px
+    desktop: 935px,
+    xl:1200px,
 );
 
 
@@ -8,3 +9,9 @@ $breakpoints: (
         @content;
         }
     }
+
+    @mixin xl {
+        @media screen and (min-width: map-get($breakpoints, xl)){
+            @content;
+            }
+        }
