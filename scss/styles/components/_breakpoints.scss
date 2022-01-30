@@ -1,6 +1,7 @@
 $breakpoints: (
     desktop: 935px,
     xl:1200px,
+    s:350px,
 );
 
 
@@ -15,3 +16,9 @@ $breakpoints: (
             @content;
             }
         }
+
+        @mixin s {
+            @media screen and (max-width: map-get($breakpoints, s)){
+                @content;
+                }
+            }

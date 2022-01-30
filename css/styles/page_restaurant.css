@@ -31,8 +31,153 @@ section {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
+.section_menu .btn_commander:hover {
+  box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #f7f7f6;
+}
+
+footer {
+  margin-top: auto;
+}
+
+section {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+footer {
+  height: 15rem;
+  background-color: #353535;
+  margin-top: auto;
+}
+footer .footer_box {
+  margin-left: 1.5rem;
+}
+footer .container_footer {
+  max-width: 1024px;
+  margin: auto;
+  display: grid;
+}
+footer .container_footer .logo_footer a h3 {
+  color: white;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+footer .container_footer .logo_footer:hover a h3 {
+  color: #9356DC;
+}
+footer .container_footer .link_footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+footer .container_footer .link_footer a {
+  text-decoration: none;
+  color: white;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+footer .container_footer .link_footer .fa-utensils {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+footer .container_footer .link_footer .fa-hands-helping {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+footer .container_footer .link_footer a:hover {
+  color: #9356DC;
+}
+@media screen and (min-width: 935px) {
+  footer .container_footer .link_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 935px) {
+  footer {
+    height: 10rem;
+  }
+}
+
+.loader {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.9;
+  animation: disappear 1.5s;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .loader_circle {
+  border: 16px solid #eaebec;
+  width: 10rem;
+  height: 10rem;
+  border-top-color: #FF79DA;
+  border-bottom-color: #9356DC;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 3;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
 header {
-  height: 6rem;
+  height: 8rem;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -69,7 +214,7 @@ Body {
 }
 @media screen and (min-width: 1200px) {
   .img_background img {
-    height: 60vh;
+    height: 50vh;
   }
 }
 
@@ -92,13 +237,24 @@ Body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 1200px) {
+  .section_menu .btn_commander {
+    margin-top: 0;
+  }
 }
 .section_menu .btn_commander a {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 1200px) {
+  .section_menu .btn_note {
+    margin-top: 5rem;
+  }
 }
 .section_menu .container_main {
   display: block;
@@ -140,7 +296,6 @@ Body {
 }
 .section_menu .container_main .container_menu {
   margin-left: 1rem;
-  margin-right: 1rem;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -150,9 +305,6 @@ Body {
     grid-template-columns: 1fr 1fr 1fr;
     height: 27vh;
   }
-}
-.section_menu .container_main .container_menu .menu {
-  margin-bottom: 4rem;
 }
 .section_menu .container_main .container_menu .menu .subtitle {
   position: relative;
@@ -185,9 +337,12 @@ Body {
   border-radius: 15px;
   margin-top: 2rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 99%;
+  max-width: 98%;
+}
+@media screen and (max-width: 350px) {
+  .section_menu .container_main .container_menu .menu .food .choix {
+    width: 30rem;
+  }
 }
 .section_menu .container_main .container_menu .menu .food .choix .test {
   display: flex;
@@ -201,21 +356,19 @@ Body {
   white-space: nowrap;
 }
 .section_menu .container_main .container_menu .menu .food .choix .test .description h3 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin-left: 1rem;
   margin-top: 1rem;
   max-width: 100%;
-  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden;
 }
 .section_menu .container_main .container_menu .menu .food .choix .test .description p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-left: 1rem;
   font-weight: lighter;
-  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden;
 }
 .section_menu .container_main .container_menu .menu .food .choix .test .prix {
   display: flex;
@@ -224,8 +377,8 @@ Body {
 .section_menu .container_main .container_menu .menu .food .choix .test .prix p {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 3rem;
-  margin-right: 2rem;
+  margin-top: 1rem;
+  padding: 2rem;
 }
 .section_menu .container_main .container_menu .menu .food .choix .test .check {
   font-size: 2rem;
@@ -251,62 +404,6 @@ Body {
   animation-name: "";
   transform: rotate(360deg);
   transition: 0.6s;
-}
-
-footer {
-  height: 15rem;
-  background-color: #353535;
-  margin-top: auto;
-}
-footer .footer_box {
-  margin-left: 1.5rem;
-}
-footer .container_footer {
-  max-width: 1024px;
-  margin: auto;
-  display: grid;
-}
-footer .container_footer .logo_footer p {
-  color: white;
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 0.5rem;
-}
-footer .container_footer .link_footer {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-footer .container_footer .link_footer a {
-  text-decoration: none;
-  color: white;
-  margin-top: 0.5rem;
-  font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
-}
-footer .container_footer .link_footer .fa-utensils {
-  font-size: 1rem;
-  margin-right: 1rem;
-}
-footer .container_footer .link_footer .fa-hands-helping {
-  font-size: 1rem;
-  margin-right: 0.5rem;
-}
-footer .container_footer .link_footer a:hover {
-  text-decoration: underline;
-}
-@media screen and (min-width: 935px) {
-  footer .container_footer .link_footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 935px) {
-  footer {
-    height: 10rem;
-  }
 }
 
 /*# sourceMappingURL=page_restaurant.css.map */
