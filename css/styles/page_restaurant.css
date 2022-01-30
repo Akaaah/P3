@@ -176,6 +176,42 @@ footer .container_footer .link_footer a:hover {
     transform: rotate(720deg) scale(1);
   }
 }
+.choix {
+  animation: gradual 1.5s linear forwards;
+}
+
+.food :nth-child(1) {
+  animation-delay: 1.6s;
+}
+
+.food :nth-child(2) {
+  animation-delay: 1.8s;
+}
+
+.food :nth-child(3) {
+  animation-delay: 2s;
+}
+
+.food :nth-child(4) {
+  animation-delay: 2.2s;
+}
+
+.food :nth-child(5) {
+  animation-delay: 2.4s;
+}
+
+.food :nth-child(6) {
+  animation-delay: 2.6s;
+}
+
+@keyframes gradual {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   height: 8rem;
   background-color: white;
@@ -211,6 +247,7 @@ Body {
   width: 100%;
   height: 20vh;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 @media screen and (min-width: 1200px) {
   .img_background img {
@@ -338,24 +375,25 @@ Body {
   margin-top: 2rem;
   overflow: hidden;
   max-width: 98%;
+  opacity: 0;
 }
 @media screen and (max-width: 350px) {
   .section_menu .container_main .container_menu .menu .food .choix {
     width: 30rem;
   }
 }
-.section_menu .container_main .container_menu .menu .food .choix .test {
+.section_menu .container_main .container_menu .menu .food .choix .case {
   display: flex;
   justify-content: space-between;
   height: 5rem;
   margin-right: -5rem;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .description {
+.section_menu .container_main .container_menu .menu .food .choix .case .description {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .description h3 {
+.section_menu .container_main .container_menu .menu .food .choix .case .description h3 {
   font-size: 1.6rem;
   margin-left: 1rem;
   margin-top: 1rem;
@@ -363,24 +401,24 @@ Body {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .description p {
+.section_menu .container_main .container_menu .menu .food .choix .case .description p {
   font-size: 1.3rem;
   margin-left: 1rem;
   font-weight: lighter;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .prix {
+.section_menu .container_main .container_menu .menu .food .choix .case .prix {
   display: flex;
   flex-direction: row;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .prix p {
+.section_menu .container_main .container_menu .menu .food .choix .case .prix p {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
   padding: 2rem;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .check {
+.section_menu .container_main .container_menu .menu .food .choix .case .check {
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -392,15 +430,15 @@ Body {
   height: 6rem;
   border-radius: 0px 15px 15px 0px;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test .check .fa-check-circle {
+.section_menu .container_main .container_menu .menu .food .choix .case .check .fa-check-circle {
   transform: rotate(-180deg);
 }
-.section_menu .container_main .container_menu .menu .food .choix .test:hover {
+.section_menu .container_main .container_menu .menu .food .choix .case:hover {
   cursor: pointer;
   margin-right: 0rem;
   transition: 0.5s;
 }
-.section_menu .container_main .container_menu .menu .food .choix .test:hover .check .fa-check-circle {
+.section_menu .container_main .container_menu .menu .food .choix .case:hover .check .fa-check-circle {
   animation-name: "";
   transform: rotate(360deg);
   transition: 0.6s;
