@@ -20,13 +20,13 @@ footer{
         display: grid;
         .logo_footer{
             a{  
+                text-decoration: none;
                 h3{
                     color: white;
                     margin-top: 2rem;
                     font-size: 2rem;
                     font-family: $logo;
                     margin-bottom: 0.5rem;
-                    text-decoration: none;
                 }
             }  
         }

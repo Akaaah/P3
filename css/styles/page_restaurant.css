@@ -85,13 +85,15 @@ footer .container_footer {
   margin: auto;
   display: grid;
 }
+footer .container_footer .logo_footer a {
+  text-decoration: none;
+}
 footer .container_footer .logo_footer a h3 {
   color: white;
   margin-top: 2rem;
   font-size: 2rem;
   font-family: "Shrikhand", cursive;
   margin-bottom: 0.5rem;
-  text-decoration: none;
 }
 footer .container_footer .logo_footer:hover a h3 {
   color: #9356DC;
