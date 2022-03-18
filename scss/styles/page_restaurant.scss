@@ -125,10 +125,9 @@ Body{
                     background-image: $gradient;
                     background-clip: text;
                     -webkit-background-clip: text;
-                    color: transparent;
                     opacity: 1;
                     transition: 0.5s;
-                    cursor: pointer;
+
                 }
                 .far{
                     opacity: 0;
