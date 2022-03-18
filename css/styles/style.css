@@ -440,6 +440,7 @@ h1 {
   -webkit-background-clip: text;
   opacity: 1;
   transition: 0.5s;
+  color: transparent;
 }
 .section_restaurants .container_restaurants .box_restaurants .description .heart:hover .far {
   opacity: 0;

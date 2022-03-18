@@ -198,14 +198,6 @@ footer .container_footer .link_footer a:hover {
   animation-delay: 2.2s;
 }
 
-.food :nth-child(5) {
-  animation-delay: 2.4s;
-}
-
-.food :nth-child(6) {
-  animation-delay: 2.6s;
-}
-
 @keyframes gradual {
   0% {
     opacity: 0;
@@ -325,9 +317,9 @@ Body {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
   opacity: 1;
   transition: 0.5s;
+  color: transparent;
   cursor: pointer;
 }
 .section_menu .container_main .title .heart:hover .far {

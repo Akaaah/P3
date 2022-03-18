@@ -127,7 +127,8 @@ Body{
                     -webkit-background-clip: text;
                     opacity: 1;
                     transition: 0.5s;
-
+                    color: transparent;
+                    cursor: pointer;
                 }
                 .far{
                     opacity: 0;
