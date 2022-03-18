@@ -1,2 +1,0 @@
-Un fichier au format TXT contenant le lien vers votre repository GitHub : https://github.com/Akaaah/P3 
-Un fichier au format TXT contenant le lien vers la page web du site : https://akaaah.github.io/P3/

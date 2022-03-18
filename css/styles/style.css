@@ -81,13 +81,15 @@ h1 {
   height: 3.5rem;
   background-color: #eaebec;
   margin-top: 0.3rem;
-}
-.contenair_header .localisation p {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-.contenair_header .localisation p .fa-map-marker-alt {
+.contenair_header .localisation .Localisation_input {
+  border: none;
+  background-color: #eaebec;
+}
+.contenair_header .localisation .fa-map-marker-alt {
   margin-right: 1rem;
 }
 
@@ -436,7 +438,6 @@ h1 {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
   opacity: 1;
   transition: 0.5s;
 }
